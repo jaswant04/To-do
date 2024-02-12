@@ -1,0 +1,130 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --text-color: rgba(255, 255, 255, 0.87);
+  --background-color: #242424;
+  --button-background-color: #1a1a1a;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #ffffff;
+    --background-color: #242424;
+    --button-background-color: #1a1a1a;
+  }
+}
+
+/* Light Mode */
+@media (prefers-color-scheme: light) {
+  :root {
+    --text-color: #213547;
+    --background-color: #ffffff;
+    --button-background-color: #f9f9f9;
+  }
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  min-width: 320px;
+  height: 100vh;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 3.2vw;
+  /* Responsive font size */
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  color: #96aaba;
+  font-family: inherit;
+  background-color: var(--button-background-color);
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+button:hover {
+  border-color: #646cff;
+  color: #fff;
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+#delete {
+  background: #fff;
+  padding: .2rem;
+  width: 100%;
+}
+
+.table {
+  margin: 1rem 0;
+}
+
+.CreateTodo {
+  width: 40vw;
+}
+
+input {
+  padding: 0.3rem;
+  border: none;
+  border-radius: 0.2rem;
+  margin: 0 0.5vw 0 0;
+  width: 75%;
+  height: 4vh;
+}
+
+.loader {
+  width: 100%;
+  border-radius: 3%;
+  height: 3vh;
+  margin: 5%;
+  aspect-ratio: 1;
+  background:
+    linear-gradient(to bottom right, #0000 calc(50% - 40px), #fff 50%, #0000 calc(50% + 40px)) bottom right/calc(200% + 80px) calc(200% + 80px) rgb(111, 109, 104);
+  animation: l8 1s infinite;
+}
+
+@keyframes l8 {
+  100% {
+    background-position: top left
+  }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .CreateTodo {
+    width: 80vw;
+    /* Adjust width for smaller screens */
+  }
+
+  button {
+    padding: 0.5em 1em;
+    font-size: 0.9em;
+  }
+}
