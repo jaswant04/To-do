@@ -4,7 +4,7 @@ const todoSchema = mongoose.Schema({
     todo: {
         type: String,
         required: true,
-        maxLength: 30,
+        maxLength: 50,
         minLength: 3,
         unique: true,
     }
